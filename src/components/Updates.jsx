@@ -1,4 +1,4 @@
-import { Card } from "./ui/Card"
+import { Card } from "./ui/Card";
 
 const updates = [
   {
@@ -16,21 +16,19 @@ const updates = [
     description:
       "Removed class in Slot 3 (11:30 - 12:45) for Washiul Alam (00000003) on Thursday",
   },
-]
+];
 
-export function Updates() {
-  return (
-    <Card title="Recent Updates">
-      <div className="space-y-4">
-        {updates.map((update, index) => (
-          <div key={index} className="space-y-1">
-            <h3 className="text-sm font-medium">{update.type}</h3>
-            <p className="text-sm text-gray-600">
-              {update.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </Card>
-  )
-}
+const Updates = () => (
+  <Card title="Updates">
+    <div className="space-y-4">
+      {updates.map((update, index) => (
+        <div key={index} className="space-y-1 rounded-lg border bg-white shadow-sm p-2">
+          <h3 className="text-sm font-medium">{update.type}</h3>
+          <p className="text-sm text-gray-600">{update.description}</p>
+        </div>
+      ))}
+    </div>
+  </Card>
+);
+
+export default Updates;

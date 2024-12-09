@@ -31,18 +31,18 @@ const items = [
   },
 ];
 
-export function MainNav({ className = "" }) {
-  return (
-    <nav className={`flex items-center space-x-4 lg:space-x-6 ${className}`}>
-      {items.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          className="text-sm font-medium transition-colors hover:text-primary"
-        >
-          {item.title}
-        </a>
-      ))}
-    </nav>
-  );
-}
+const MainNav = ({ className = "" }) => (
+  <nav className={`flex items-center space-x-4 lg:space-x-6 ${className}`}>
+    {items.map((item) => (
+      <a
+        key={item.href}
+        href={item.href}
+        className="text-sm font-medium transition-colors hover:text-primary"
+      >
+        {item.title}
+      </a>
+    ))}
+  </nav>
+);
+
+export default MainNav;

@@ -1,4 +1,3 @@
-/* QuickActions.js */
 import Button from "./ui/Button";
 
 const QuickActions = () => (
